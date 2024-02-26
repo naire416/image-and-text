@@ -4,13 +4,13 @@ $(document).ready(function() {
     const $imageBottom1 = $('#image-bottom-1');
     const $text1 = $('#text-1');
     const $audio1 = $('#audio-1');
-  
+    
     $imageTop1.on('mouseenter', function() {
-      if ($(this).hasClass('active')) {
-        $audio1.trigger('play');
-      }
+      if (!$($imageTop1).hasClass('active')) {
+         $audio1.trigger('play');
+         }
     });
-  
+
     $imageTop1.on('mouseleave', function() {
       $audio1.trigger('pause');
       $audio1.prop('currentTime', 0);
@@ -20,6 +20,8 @@ $(document).ready(function() {
       $(this).toggleClass('active');
       $imageBottom1.toggleClass('active');
       $text1.toggleClass('active');
+      $audio1.trigger('pause');
+      $audio1.prop('currentTime', 0);
     });
   });
   
@@ -31,7 +33,7 @@ $(document).ready(function() {
     const $audio2 = $('#audio-2');
   
     $imageTop2.on('mouseenter', function() {
-      if ($(this).hasClass('active')) {
+      if (!$($imageTop2).hasClass('active')) {
         $audio2.trigger('play');
       }
     });
@@ -45,6 +47,8 @@ $(document).ready(function() {
       $(this).toggleClass('active');
       $imageBottom2.toggleClass('active');
       $text2.toggleClass('active');
+      $audio2.trigger('pause');
+      $audio2.prop('currentTime', 0);
     });
   });
 
@@ -56,7 +60,7 @@ $(document).ready(function() {
     const $audio3 = $('#audio-3');
   
     $imageTop3.on('mouseenter', function() {
-      if ($(this).hasClass('active')) {
+      if (!$($imageTop3).hasClass('active')) {
         $audio3.trigger('play');
       }
     });
@@ -70,6 +74,8 @@ $(document).ready(function() {
       $(this).toggleClass('active');
       $imageBottom3.toggleClass('active');
       $text3.toggleClass('active');
+      $audio3.trigger('pause');
+      $audio3.prop('currentTime', 0);
     });
   });
 
@@ -82,7 +88,7 @@ $(document).ready(function() {
         const $audio4 = $('#audio-4');
       
         $imageTop4.on('mouseenter', function() {
-          if ($(this).hasClass('active')) {
+          if (!$($imageTop4).hasClass('active')) {
             $audio4.trigger('play');
           }
         });
@@ -96,6 +102,8 @@ $(document).ready(function() {
           $(this).toggleClass('active');
           $imageBottom4.toggleClass('active');
           $text4.toggleClass('active');
+          $audio4.trigger('pause');
+          $audio4.prop('currentTime', 0);
         });
       });
     
@@ -108,7 +116,7 @@ $(document).ready(function() {
         const $audio5 = $('#audio-5');
       
         $imageTop5.on('mouseenter', function() {
-          if ($(this).hasClass('active')) {
+          if (!$($imageTop5).hasClass('active')) {
             $audio5.trigger('play');
           }
         });
@@ -122,6 +130,8 @@ $(document).ready(function() {
           $(this).toggleClass('active');
           $imageBottom5.toggleClass('active');
           $text5.toggleClass('active');
+          $audio5.trigger('pause');
+          $audio5.prop('currentTime', 0);
         });
       });
 
@@ -133,7 +143,7 @@ $(document).ready(function() {
         const $audio6 = $('#audio-6');
       
         $imageTop6.on('mouseenter', function() {
-          if ($(this).hasClass('active')) {
+          if (!$($imageTop6).hasClass('active')) {
             $audio6.trigger('play');
           }
         });
@@ -147,5 +157,7 @@ $(document).ready(function() {
           $(this).toggleClass('active');
           $imageBottom6.toggleClass('active');
           $text6.toggleClass('active');
+          $audio6.trigger('pause');
+          $audio6.prop('currentTime', 0);
         });
       });
